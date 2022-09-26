@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="HiberSon" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2395dd4c-0126-4b59-b806-c2fccc901bcb">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#A5B4C2">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="HiberDataset" uuid="7f50a55e-acc3-40f4-9b1d-204e7958399a">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="stokKodu" class="java.lang.String"/>
+		<field name="stokAdi" class="java.lang.String"/>
+		<field name="stokTipiKarti" class="org.deneme.models.StokTipiKarti"/>
+		<field name="birimi" class="java.lang.String"/>
+		<field name="barkodu" class="java.lang.String"/>
+		<field name="stokKdvKarti" class="org.deneme.models.StokKdvKarti"/>
+		<field name="aciklama" class="java.lang.String"/>
+		<field name="tarih" class="java.sql.Date"/>
+	</subDataset>
+	<parameter name="HiberPara" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="555" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="70" width="780" height="470" uuid="6ca62448-14fe-439e-8ab2-bbb0f2ae8fc7">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="HiberDataset" uuid="8ad4535f-eca1-415d-9335-da038508b966">
+						<dataSourceExpression><![CDATA[$P{HiberPara}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="80" uuid="7e50b708-fc58-4da2-a32d-8961e1e1464e">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" uuid="ed54ea39-f628-4542-befb-b1777743ca8e"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[StokKodu]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="30" uuid="6fca6474-6e57-407a-b5a0-e29594c2f36a"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{stokKodu}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="7874df7d-e049-4141-aaa7-b7c180043b0d">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" uuid="ece49a84-f3d5-45cc-8cf2-4699bda0b5f6"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[StokAdı]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="30" uuid="5f764bca-9678-457b-8e2e-6169d9bed96e"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{stokAdi}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="ec7d5d3e-b648-4e24-868f-0feccaa0822e">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" uuid="f7973e3c-5c52-4bc8-a40a-a6891972d668"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[StokTipi]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="30" uuid="be9534ae-6f27-4c0b-8652-2c166a914cc7"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{stokTipiKarti}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="2c0f528b-0e8d-4004-ae45-9c357d9a71bb">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="329ab8e8-2429-4b2d-a104-dd4d0667ce57"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[StokBirimi]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="30" uuid="38a10932-8e97-4515-bd32-ff31e9033410"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{birimi}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="110" uuid="c063d70f-0a6b-4d21-a36a-7b263d62b5fa">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="30" uuid="6b5b8906-cfbf-499e-bccd-e4d2151df525"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[StokBarkodu]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="30" uuid="c40729b9-7be9-4372-b05e-c6a8ee8757ad"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{barkodu}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="110" uuid="5531c33a-f355-41cc-a0b0-acd86bd711cc">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="30" uuid="7aee1495-e969-48eb-964b-ca9306916ce1"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[KdvOranı]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="30" uuid="9e5bd9e4-1654-4ba3-93f2-d972bf5b2f81"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{stokKdvKarti}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="110" uuid="2d3c565a-a9f4-4801-8461-94e68666f39e">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="30" uuid="7eb20479-1199-43bc-9f03-c7df79251e87"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[StokAciklama]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="30" uuid="a8d360a7-4c04-4328-9dba-45626abacc3e"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{aciklama}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="f7562c95-b8f7-4d0e-ba6e-f412de5e6317">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column8"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="120" height="30" uuid="7d50eebc-1342-47de-8cd4-51273c20e14c"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[StokTarih]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="120" height="30" uuid="7ee922ea-960d-4492-b916-e2744aa502df"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{tarih}.toLocalDate()]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement x="295" y="8" width="175" height="30" uuid="53f4796f-47ae-410e-affa-8c0a9549c38e"/>
+				<textElement textAlignment="Center">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Stok Raporu]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
